@@ -1,0 +1,412 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+  position: relative;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+}
+
+.welcome {
+  font-size: 1.2rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+.navbar button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  position: absolute;
+  right: 1rem;
+}
+
+.navbar button:hover {
+  background-color: #d32f2f;
+}
+
+/* Login Page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-form h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.login-form input {
+  width: calc(100% - 1rem);
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #0056b3;
+}
+
+.login-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-form a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .login-form {
+    padding: 1.5rem;
+    box-shadow: none;
+  }
+
+  .login-form h1 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Signup Page */
+.signup-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.signup-form {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.signup-form h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #333;
+}
+
+.signup-form input {
+  width: calc(100% - 1rem);
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.signup-form input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.signup-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 1rem 0;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.signup-form button:hover {
+  background-color: #0056b3;
+}
+
+.signup-form p {
+  margin-top: 1rem;
+}
+
+.signup-form a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.signup-form a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .signup-form {
+    padding: 1.5rem;
+    box-shadow: none;
+  }
+
+  .signup-form h1 {
+    font-size: 1.5rem;
+  }
+}
+
+
+/* Tasks Page */
+
+.tasks-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tasks-container h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.add-task-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.add-task-button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+}
+
+.task-item {
+  background: #fff;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; 
+  min-height: 40px;
+}
+
+.task-details {
+  margin-right: 2rem;
+}
+
+.task-title {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.task-description {
+  color: #555;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #f44336;
+  cursor: pointer;
+}
+
+.delete-icon:hover {
+  color: #d32f2f;
+}
+
+.edit-icon {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #007bff;
+  cursor: pointer;
+}
+
+.edit-icon:hover {
+  color: #0056b3;
+}
+
+/* Modal */
+.task-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  max-width: 500px;
+  margin: auto;
+  position: relative;
+}
+
+.task-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TaskForm */
+
+.task-form {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+}
+
+.task-form input,
+.task-form textarea {
+  width: calc(100% - 2rem);
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.task-form input:focus,
+.task-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.task-form button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+.task-form textarea {
+  resize: none;
+}
+
+/* Navigation */
+
+.navbarLoggedIn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  padding: 1.5rem;
+  color: white;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbarLoggedOut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 1.5rem;
+  color: #007bff;
+  position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.user-controls {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+}
+
+.username {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+}
+
+.logout-icon {
+  color: white;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+
+.logout-icon:hover {
+  color: #d32f2f;
+}
