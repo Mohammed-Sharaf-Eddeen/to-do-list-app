@@ -4,6 +4,8 @@ import { jwtDecode } from 'jwt-decode';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 import Tasks from './pages/Tasks';
+import Code from './pages/Code';
+import Comments from './pages/Comments';
 import setAuthToken from './utils/setAuthToken';
 import Navigation from './components/Navigation';
 import './App.css';
@@ -41,6 +43,8 @@ const App = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/tasks" element={<Tasks />} />
+        <Route path="/code" element={<Code />} />
+        <Route path="/comments" element={<Comments />} />
         <Route path="/" element={<Navigate to="/login" />} />
 
       </Routes>
