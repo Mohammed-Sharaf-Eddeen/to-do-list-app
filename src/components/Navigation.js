@@ -16,7 +16,7 @@ const Navigation = ({ username, onLogout }) => {
   return (
     <nav className={username ? "navbarLoggedIn" : "navbarLoggedOut"}>
       <div className="container">
-        <span className="title">TO DO LIST</span>
+        <span className="title">ProTasker</span>
         {username && (
           <div className="user-controls">
             <span className="username">{username}</span>
