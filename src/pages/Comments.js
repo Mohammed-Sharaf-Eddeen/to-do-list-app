@@ -57,6 +57,17 @@ const Comments = () => {
     }
   };
 
+  const formatDate = (isoString) => {
+    const date = new Date(isoString);
+    return date.toLocaleDateString('en-US', {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+  };
+
   return (
     <div className="comments-container">
       <form onSubmit={handleCommentSubmit} className="comment-form">
@@ -84,12 +95,14 @@ const Comments = () => {
         <div className="comments-list">
           {comments.map((comment) => (
             <div key={comment._id} className="comment">
-              {/* Use DOMPurify to sanitize HTML input */}
               <p
                 dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(comment.text),
                 }}
               />
+              <p className="comment-date">
+                {formatDate(comment.created_at)}
+              </p>
             </div>
           ))}
         </div>
